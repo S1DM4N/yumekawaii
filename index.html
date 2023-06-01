@@ -1,517 +1,434 @@
 <!DOCTYPE html>
 <html lang="ru">
-
+<!-- Данные о сайте, метаданные и подключение стилей и иконок -->
 <head>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <title>yumekawaii</title>
-    <link rel="icon" href="img/logo_small.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
+<!-- Начало сайта -->
 <body>
+    <!-- Хеадер -->
     <div class="wrapper">
         <header class="header">
+            <!-- Верхний хеадер -->
             <div class="header__top pre-header">
                 <div class="pre-header__container">
                     <div class="pre-header__body">
-                        <a href="index.htm" class="pre-header__logo"><img src="static/okoprom/img/new.svg" alt=""></a>
+                        <a href="index.html" class="pre-header__logo full_logo"><img src="img/logo.svg" alt="logo"></a>
+                        <a href="index.html" class="pre-header__logo small_logo"><img src="img/logo_small.svg" alt="small_logo"></a>
                         <div class="pre-header__info">
                             <div class="pre-header__contacts">
                                 <a href="mailto:yumekawaii@gmail.com"
                                     class="pre-header__contact">yumekawaii@gmail.com</a>
                                 <a href="tel:+79999099009" class="pre-header__contact">+7 (999) 909-90-09</a>
                             </div>
-                            <div data-da=".menu__body, 670, 1" class="pre-header__links">
-                                <a href="dostavka-i-oplata/index.htm" class="pre-header__link">Доставка и оплата</a>
-                                <a href="garantiya/index.htm" class="pre-header__link">Гарантия</a>
+                            <div class="pre-header__links">
+                                <a href="dostavka-i-oplata.html" class="pre-header__link">Доставка и оплата</a>
+                                <a href="garantiya.html" class="pre-header__link">Гарантия</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- Нижний хеадер -->
             <div class="header__main-row">
                 <div class="header__container">
-                    <div class="header__body">
+                    <!-- Скрытый хеадер под мобилку -->
+                    <div class="header__body header__table">
                         <div class="header__menu menu">
+                            <div class="header__buttons">
+                                <div class="header__button header__button--search">
+                                    <button type="submit" class="search-header__button icon icon--filled">
+                                        <svg width="24" height="24">
+                                            <use href="img/icons/icons.svg#svg-search"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <a type="button"  href="cart.html"class="header__button header__button--cart icon icon--filled">
+                                    <svg class="show-default" width="24" height="24">
+                                        <use href="img/icons/icons.svg#svg-cart"></use>
+                                    </svg>
+                                </a>
+                            </div>
                             <button type="button" class="menu__icon icon-menu"><span></span></button>
+                        </div>
+                    </div>
+                    <!-- Хеадер под десктоп -->
+                    <div class="header__body header__desktop">
+                        <div class="header__menu menu">
                             <nav class="menu__body">
                                 <ul class="menu__list">
                                     <li class="menu__item"><a
-                                            href="catalog/Stanki-dlia-razdelki-kabelia/index.htm">Каталог</a></li>
-                                    <li class="menu__item"><a
-                                            href="catalog/Separatory-Drobilki-dlia-kabelia/index.htm">Наше
-                                            производство</a></li>
-                                    <li class="menu__item"><a href="o-kompanii/index.htm">О компании</a></li>
-                                    <li class="menu__item"><a class="menu__item" href="contacts/index.htm">Контакты</a>
+                                            href="catalog.html">Каталог</a></li>
+                                    <li class="menu__item"><a href="o-kompanii.html">О компании</a></li>
+                                    <li class="menu__item"><a class="menu__item" href="contacts.html">Контакты</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
-                        <div data-da=".header__btn-wrapper, 870, first" class="header__buttons">
+                        <div class="header__buttons">
                             <div class="header__button header__button--search">
-                                <form action="/search/" class="search-header">
-                                    <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-                                        placeholder="Поиск" class="search-header__input">
-                                    <button type="submit" class="search-header__button icon icon--filled">
-                                        <svg width="24" height="24">
-                                            <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-search"></use>
-                                        </svg>
-                                    </button>
-                                </form>
-                            </div>
-                            <button type="button" class="header__button header__button--cart icon icon--filled"
-                                onclick="location.href='/cart';" style="cursor: pointer;">
-                                <svg class="show-default" width="24" height="24">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-cart"></use>
-                                </svg>
-                                <svg class="show-search-bar" width="24" height="24">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-close"></use>
-                                </svg>
-                            </button>
-                            <div data-da=".header__menu, 1180, last " class="header__btn-wrapper get_contact_button">
-                                <button data-da=".menu__body, 670, last" type="button"
-                                    class="header__button header__button--get-consult button button--black get_contact_button"
-                                    data-popup=".popup--contact-us">Запросить консультацию
+                                <button type="submit" class="search-header__button icon icon--filled">
+                                    <svg width="24" height="24">
+                                        <use href="img/icons/icons.svg#svg-search"></use>
+                                    </svg>
                                 </button>
+                            </div>
+                            <a class="header__button header__button--cart icon icon--filled" href="cart.html">
+                                <svg class="show-default" width="24" height="24">
+                                    <use href="img/icons/icons.svg#svg-cart"></use>
+                                </svg>
+                            </a>
+                            <div class="header__btn-wrapper get_contact_button">
+                                <a class="header__button header__button--get-consult button button--purpl get_contact_button">
+                                    Запросить консультацию
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        <!-- Страница сайта -->
         <main class="page">
-
-
-
-
+            <!-- Секция слайдера -->
             <section class="page__hero hero">
                 <div class="hero__container">
                     <div class="hero__slider">
                         <div class="hero__swiper">
-
-
-
                             <div class="hero__slide slide-hero">
+                                <!-- Блок текста -->
                                 <div class="slide-hero__body">
-                                    <div class="slide-hero__image">
-
-                                        <picture>
-                                            <source type="image/webp"
-                                                data-srcset="/media/slider/images/2022/05/26/%D0%9E%D0%B1%D0%B7%D0%BE%D1%80_%D0%9B%D0%B8%D0%BD%D0%B8%D0%B8.png">
-                                            <img src="media/slider/images/2022/05/26/%D0%9E%D0%B1%D0%B7%D0%BE%D1%80_%D0%9B%D0%B8%D0%BD%D0%B8%D0%B8.png"
-                                                data-src="/media/slider/images/2022/05/26/%D0%9E%D0%B1%D0%B7%D0%BE%D1%80_%D0%9B%D0%B8%D0%BD%D0%B8%D0%B8.png"
-                                                alt="">
-                                        </picture>
-
-                                    </div>
                                     <div class="slide-hero__descr">
-                                        <h2 class="slide-hero__title title">Линия для переработки</h2>
-
-
-
+                                        <h2 class="slide-hero__title title">Супер распродажа товаров для дома</h2>
                                         <div class="slide-hero__info">
-
-
-
-                                            <div class="slide-hero__row">
-                                                <span class="slide-hero__name"> 1 </span>
-                                                <span class="slide-hero__value">Держатель биг-бэга с регулируемой
-                                                    высотой</span>
+                                            <div class="slide-hero__mark">
+                                                <p class="slide-hero__txt">
+                                                    Скидка на
+                                                </p>
+                                                <p class="slide-hero__sale">
+                                                    ПЛЮШЕВУЮ КАПИБАРУ!
+                                                </p>
                                             </div>
-
-
-
-                                            <div class="slide-hero__row">
-                                                <span class="slide-hero__name"> 2 </span>
-                                                <span class="slide-hero__value">Водный сепаратор</span>
-                                            </div>
-
-
-
-                                            <div class="slide-hero__row">
-                                                <span class="slide-hero__name"> 3 </span>
-                                                <span class="slide-hero__value">Фильтр воды</span>
-                                            </div>
-
-
-
-                                            <div class="slide-hero__row">
-                                                <span class="slide-hero__name"> 4 </span>
-                                                <span class="slide-hero__value">Бункер и шнек для подачи
-                                                    материала</span>
-                                            </div>
-
-
-
-                                            <div class="slide-hero__row">
-                                                <span class="slide-hero__name"> 5 </span>
-                                                <span class="slide-hero__value">Бункер и шнек для забора пластика</span>
-                                            </div>
-
-
-
+                                            <!-- SVG элемент текста -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="236" height="236" viewBox="0 0 236 236" fill="none">
+                                                <path d="M15 118H221M18.5107 91.3415L217.491 144.658M28.8002 66.5L207.201 169.5M45.1687 45.1681L190.833 190.832M66.501 28.7993L169.501 207.201M91.3426 18.5097L144.659 217.49M118.001 15L118.001 221M144.659 18.5097L91.3428 217.49M169.502 28.7993L66.5015 207.201M190.832 45.1681L45.1685 190.832M207.201 66.5L28.8002 169.5M217.491 91.3415L18.5102 144.658M200.082 117.768C200.082 163.228 163.229 200.081 117.769 200.081C72.3091 200.081 35.4565 163.228 35.4565 117.768C35.4565 72.3079 72.3091 35.4553 117.769 35.4553C163.229 35.4553 200.082 72.3079 200.082 117.768Z" stroke="#FFA73F" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
                                         </div>
-                                        <div class="slide-hero__price">1 200 000 ₽</div>
                                     </div>
+                                    <!-- Кратинка продукта -->
+                                    <img src="img/products/product_01.png" alt="product_01">
                                 </div>
+                                <!-- Переход на страницу товара через JS -->
                                 <div class="slide-hero__bottom">
-                                    <button href=""
-                                        onclick="location.href='https://okoprom.ru/catalog/product/liniya-dlya-pererabotki-kabelya-i-othodov/'"
-                                        type="button" class="slide-hero__button button button--white">Подробнее
-                                    </button>
+                                    <button onclick="window.location.href='product.html'" class="slide-hero__button button button--white">Подробнее</button>
                                 </div>
                             </div>
-
-
                         </div>
+                        <!-- Кнопки управления слайдера -->
                         <div class="hero__controls">
                             <button type="button" class="hero__arrow hero__arrow--next icon icon--filled">
                                 <svg width="20" height="20">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-arr-right"></use>
+                                    <use href="img/icons/icons.svg#svg-arr-right"></use>
                                 </svg>
                             </button>
                             <button type="button" class="hero__arrow hero__arrow--prev icon icon--filled">
                                 <svg width="20" height="20">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-arr-left"></use>
+                                    <use href="img/icons/icons.svg#svg-arr-left"></use>
                                 </svg>
                             </button>
                         </div>
                     </div>
                 </div>
             </section>
-
-
-
-            <!-- /.hero -->
+            <!-- Блок категорий товара -->
             <section class="page__assortment assortment">
                 <div class="assortment__container">
-                    <h2 class="assortment__title title">Бесплатная доставка во Все Регионы!</h2>
-
-
-                    <p class="assortment__descr">Мы на связи всегда и разберемся с любыми вопросами возникшими во время
-                        эксплуатации нашего оборудования.</p>
+                    <!-- Загаловок -->
+                    <div class="benefits__title">
+                        <h2 class="assortment__title title">Фигурки, мягкие игрушки, пластинки, сувениры и многое другое</h2>
+                    <p class="assortment__descr">Мы на связи всегда и разберемся с любыми вопросами возникшими во&nbsp;время&nbsp;заказа&nbsp;товара.</p>
+                    </div>
+                    <!-- Таблица товаров -->
                     <div class="assortment__body">
-
-
-                        <a href="catalog/Stanki-dlia-razdelki-kabelia/index.htm" class="assortment__item">
-                            <h3 class="assortment__label">Станки для разделки кабеля</h3>
-
-                            <div class="assortment__image">
-                                <picture>
-                                    <source data-srcset="/media/categories/images/2022/04/04/3_transparen.png"
-                                        type="image/webp">
-                                    <img src="#" data-src="/media/categories/images/2022/04/04/3_transparen.png" alt="">
-                                </picture>
+                        <!-- Ссылка, текст и изображение категории товаров -->
+                        <a href="catalog.html" class="assortment__item">
+                            <h3 class="assortment__label">Аксессуары для дома</h3>
+                            <div class="assortment__image">category
+                                <img src="img/category/category_01.png" alt="img/category/category_01.png">category
                             </div>
-
                         </a>
-
-                        <a href="catalog/Separatory-Drobilki-dlia-kabelia/index.htm" class="assortment__item">
-                            <h3 class="assortment__label">Производство</h3>
-
-                            <div class="assortment__image">
-                                <picture>
-                                    <source data-srcset="/media/categories/images/2022/04/04/2_transparen.png"
-                                        type="image/webp">
-                                    <img src="#" data-src="/media/categories/images/2022/04/04/2_transparen.png" alt="">
-                                </picture>
+                        <a href="catalog.html" class="assortment__item">
+                            <h3 class="assortment__label">Пластинки</h3>
+                            <div class="assortment__image">category
+                                <img src="img/category/category_02.png" alt="img/category/category_02.png">category
                             </div>
-
                         </a>
-
-                        <a href="catalog/Zapasnye-chasti/index.htm" class="assortment__item">
-                            <h3 class="assortment__label">Запасные части</h3>
-
-                            <div class="assortment__image">
-                                <picture>
-                                    <source
-                                        data-srcset="/media/categories/images/2022/04/04/11_transparen_transparen.png"
-                                        type="image/webp">
-                                    <img src="#"
-                                        data-src="/media/categories/images/2022/04/04/11_transparen_transparen.png"
-                                        alt="">
-                                </picture>
+                        <a href="catalog.html" class="assortment__item">
+                            <h3 class="assortment__label">Фигурки</h3>
+                            <div class="assortment__image">category
+                                <img src="img/category/category_03.png" alt="img/category/category_"0.png3>category
                             </div>
-
                         </a>
-
+                        <a href="catalog.html" class="assortment__item">
+                            <h3 class="assortment__label">Мягкие игрушки</h3>
+                            <div class="assortment__image">category
+                                <img src="img/category/category_04.png" alt="img/category/category_04.png">category
+                            </div>
+                        </a>
+                        <a href="catalog.html" class="assortment__item">
+                            <h3 class="assortment__label">Сувениры</h3>
+                            <div class="assortment__image">category
+                                <img src="img/category/category_05.png" alt="img/category/category_05.png">category
+                            </div>
+                        </a>
+                        <a href="catalog.html" class="assortment__item">
+                            <h3 class="assortment__label">Другое</h3>
+                            <div class="assortment__image">category
+                                <img src="img/category/category_06.png" alt="img/category/category_06.png">category
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
-            <!-- /.assortment -->
-
-
-
-
-            <!-- /.assortment -->
+            <!-- Блок преимуществ -->
             <section class="page__benefits benefits">
                 <div class="benefits__container">
-                    <h2 class="benefits__title title">Преимущества</h2>
+                    <!-- Заголовок -->
+                    <h2 class="benefits__title title">Ваши желания – наш интерес, ведь тогда нам будет к чему стремиться</h2>
                     <div class="benefits__body">
+                        <!-- Группа иконки и текста -->
                         <div class="benefits__item">
                             <div class="benefits__icon icon icon--outline">
                                 <svg width="20" height="20">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-rent"></use>
-                                </svg>
-                            </div>
-                            <div class="benefits__info">
-                                <h4 class="benefits__label">Минус 10% при оплате Онлайн сейчас</h4>
-                                <p class="benefits__descr">Если вы сейчас оформите заказ с онлайн оплатой,
-                                    получите моментальную скидку в 10%</p>
-                            </div>
-                        </div>
-                        <div class="benefits__item">
-                            <div class="benefits__icon icon icon--outline">
-                                <svg width="20" height="20">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-service"></use>
+                                    <use href="img/icons/icons.svg#svg-service"></use>
                                 </svg>
                             </div>
                             <div class="benefits__info">
                                 <h4 class="benefits__label">Всегда на связи</h4>
-                                <p class="benefits__descr">Консультируем при покупке и в дальнейшем при эксплуатации
-                                    нашего
-                                    оборудования</p>
+                                <p class="benefits__descr">Консультируем при покупке и в дальнейшем при эксплуатации нашего товара</p>
                             </div>
                         </div>
-
                         <div class="benefits__item">
                             <div class="benefits__icon icon icon--outline">
                                 <svg width="20" height="20">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-case"></use>
+                                    <use href="img/icons/icons.svg#svg-case"></use>
                                 </svg>
                             </div>
                             <div class="benefits__info">
                                 <h4 class="benefits__label">Опыт в сфере</h4>
-                                <p class="benefits__descr">Большой опыт в переработке вторсырья позволяет глубоко
-                                    изучать
-                                    проблемы и находить лучшие решения</p>
+                                <p class="benefits__descr">Большой опыт в транспортировке товаров позволяет глубоко изучать проблемы и находить лучшие решения</p>
                             </div>
                         </div>
-
                         <div class="benefits__item">
                             <div class="benefits__icon icon icon--outline">
                                 <svg width="20" height="20">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-settings"></use>
+                                    <use href="img/icons/icons.svg#svg-settings"></use>
                                 </svg>
                             </div>
                             <div class="benefits__info">
-                                <h4 class="benefits__label">Наличие запчастей</h4>
-                                <p class="benefits__descr">Преимуществом производства своими силами является замена
-                                    любых
-                                    комплектующих и ремонт при поломке</p>
+                                <h4 class="benefits__label">Удобство поиска</h4>
+                                <p class="benefits__descr">Больше не придется тратить время в поисках ссылок магазинов и копировании текста в переводчик</p>
                             </div>
                         </div>
-
                         <div class="benefits__item">
                             <div class="benefits__icon icon icon--outline">
                                 <svg width="20" height="20">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-delivery"></use>
+                                    <use href="img/icons/icons.svg#svg-delivery"></use>
                                 </svg>
                             </div>
                             <div class="benefits__info">
                                 <h4 class="benefits__label">Доставка по всей России</h4>
-                                <p class="benefits__descr">Отправим товар транспортной компанией или почтовым
-                                    отправлением
-                                    (оплата при получении)</p>
+                                <p class="benefits__descr">Отправим товар транспортной компанией или почтовым отправлением (оплата при получении)</p>
                             </div>
                         </div>
-
-
                         <div class="benefits__item">
                             <div class="benefits__icon icon icon--outline">
                                 <svg width="20" height="20">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-guarantee"></use>
+                                    <use href="img/icons/icons.svg#svg-rent"></use>
+                                </svg>
+                            </div>
+                            <div class="benefits__info">
+                                <h4 class="benefits__label">Низкая комиссия</h4>
+                                <p class="benefits__descr">Комиссия за наши услуги значительно ниже, чем у большинства конкурентов</p>
+                            </div>
+                        </div>
+                        <div class="benefits__item">
+                            <div class="benefits__icon icon icon--outline">
+                                <svg width="20" height="20">
+                                    <use href="img/icons/icons.svg#svg-guarantee"></use>
                                 </svg>
                             </div>
                             <div class="benefits__info">
                                 <h4 class="benefits__label">Гарантия на всё</h4>
-                                <p class="benefits__descr">Предоставляется гарантия сроком до 1 года со дня приобретения
-                                    товара</p>
+                                <p class="benefits__descr">Предоставляется гарантия сроком до 1 года со дня приобретения товара</p>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </section>
-            <!-- /.benefits -->
-            <!-- /.why-us -->
+            <!-- Блок о товарах -->
             <section class="page__why-us why-us">
                 <div class="why-us__container">
                     <div class="why-us__body">
+                        <!-- Загаловок -->
                         <div class="why-us__info">
-                            <h2 class="why-us__title title">Почему именно мы?</h2>
+                            <h2 class="why-us__title title">Товары официальных брендов японии</h2>
                             <div class="why-us__descr">
-                                <p>За долгое время работы в этой области у нас более одной тысячи клиентов в базе в том
-                                    числе
-                                    и представленные выше. В основном это компании по переработке вторсырья.</p>
-                                <p>Мы уже прошли тот путь который вам предстоит пройти после приобретения нашей
-                                    продукции
-                                    и лучше подскажем: что вам лучше подойдет, чего надо избегать и как более эффективно
-                                    использовать то что есть.</p>
+                                <!-- Текст -->
+                                <p>Наш интернет-магазин предоставляет только оригинальные японские товары от официальных брендов.
+                                    Мы заботимся о качестве товаров, поэтому выбираем поставщиков с особой тщательностью и 
+                                    контролируем каждую поставку.</p>
+                                <p>Приобретая товары в нашем магазине, вы можете быть уверены в их качестве и оригинальности.</p>
                             </div>
                         </div>
+                        <!-- Таблица логотипов брендов -->
                         <div class="why-us__partners">
                             <div class="why-us__item">
-                                <picture>
-                                    <source data-srcset="/static/okoprom/img/why-us/why-us-01.webp" type="image/webp">
-                                    <img src="#" data-src="/static/okoprom/img/why-us/why-us-01.png" alt="">
-                                </picture>
+                                    <img src="img/brand/brand_01.png" alt="img/brand/brand_01.png">
                             </div>
                             <div class="why-us__item">
-                                <picture>
-                                    <source data-srcset="/static/okoprom/img/why-us/why-us-02.webp" type="image/webp">
-                                    <img src="#" data-src="/static/okoprom/img/why-us/why-us-02.png" alt="">
-                                </picture>
+                                <img src="img/brand/brand_02.png" alt="img/brand/brand_02.png">
                             </div>
                             <div class="why-us__item">
-                                <picture>
-                                    <source data-srcset="/static/okoprom/img/why-us/why-us-03.webp" type="image/webp">
-                                    <img src="#" data-src="/static/okoprom/img/why-us/why-us-03.png" alt="">
-                                </picture>
+                                <img src="img/brand/brand_03.png" alt="img/brand/brand_03.png">
                             </div>
                             <div class="why-us__item">
-                                <picture>
-                                    <source data-srcset="/static/okoprom/img/why-us/why-us-04.webp" type="image/webp">
-                                    <img src="#" data-src="/static/okoprom/img/why-us/why-us-04.png" alt="">
-                                </picture>
+                                <img src="img/brand/brand_04.png" alt="img/brand/brand_04.png">
                             </div>
                             <div class="why-us__item">
-                                <img src="#" data-src="/static/okoprom/img/why-us/why-us-05.svg" alt="">
+                                <img src="img/brand/brand_05.png" alt="img/brand/brand_05.png">
                             </div>
                             <div class="why-us__item">
-                                <img src="#" data-src="/static/okoprom/img/why-us/why-us-06.svg" alt="">
+                                <img src="img/brand/brand_06.png" alt="img/brand/brand_06.png">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- /.why-us -->
+            <!-- Блок форма обратной связи -->
             <section class="page__contact-us contact-us">
                 <div class="contact-us__container">
                     <div class="contact-us__body">
+                        <!-- Заголовок -->
                         <div class="contact-us__info">
                             <h2 class="contact-us__title title">Будем рады ответить на все интересующие вопросы</h2>
-                            <p class="contact-us__descr">Оставьте заявку и мы вам вскоре позвоним и проконсультируем по
-                                всем
-                                интересующим вопросам</p>
+                            <p class="contact-us__descr">Оставьте заявку и мы вам вскоре позвоним и проконсультируем по всем интересующим вопросам</p>
                         </div>
-                        <form action="/contacts/save/" method="post" class="contact-us__form form-contact">
-                            <input type="hidden" name="csrfmiddlewaretoken"
-                                value="YthsAdtGxzn7RtP4TtVwfwI3IUtwF3rsmvSzLV3aeBX3KovDW7qaBHvQptuKw07h">
+                        <!-- Форма ввода -->
+                        <form action="#" method="post" class="contact-us__form form-contact">
+                            <!-- Поля ввода -->
                             <div class="form-contact__row">
-                                <label for="name" class="form-contact__label">Ваше имя </label>
-                                <input type="text" name="name" class="input name-of" id="name" autocomplete="off"
-                                    name="form[]" data-error="Ошибка" placeholder="" data-required="" data-validate=""
-                                    maxlength="200" required="">
+                                <label class="form-contact__label">Ваше имя </label>
+                                <input type="text" name="name" class="input name-of" id="name" name="name" placeholder="" maxlength="200" required>
                             </div>
                             <div class="form-contact__row">
-                                <label for="phone" class="form-contact__label">Ваш номер </label>
-                                <input type="tel" name="phone" class="input js-phone" id="user-phone" autocomplete="off"
-                                    name="form[]" data-error="Ошибка" placeholder="" data-required="" data-validate=""
-                                    maxlength="20">
-                            </div>
-
-
-
-
-
-                            <button disabled="" type="submit"
-                                class="form-contact__button button button--white popup_button_send"
-                                onclick="ym(52613806,'reachGoal','consult')">Введите данные
+                                <label for="phone" class="form-contact__label">Ваш номер</label>
+                                <input type="tel" name="phone" class="input js-phone" id="user-phone" name="phone" placeholder="" maxlength="20">
+                 </div>
+                            <div class="form-contact__row">
+                                <label for="phone" class="form-contact__label">E-mail (необязательно)</label>
+                                <input type="tel" name="email" class="input js-phone" id="user-phone" placeholder="" maxlength="20">
+                 </div>
+                            <button type="submit" class="form-contact__button button button--white popup_button_send">
+                                Отправить
                             </button>
                         </form>
                     </div>
                 </div>
-
             </section>
-
-
         </main>
-
-
+        <!-- Футер -->
         <footer class="footer">
             <div class="footer__container">
+                <!-- Логотип -->
                 <div class="footer__top">
-                    <a href="index.htm" class="footer__logo"><img width="119" height="28"
-                            src="static/okoprom/img/logo.svg" alt=""></a>
+                    <a href="index.html" class="footer__logo"><img width="119" height="28"
+                            src="img/logo.svg" alt="logo"></a>
                 </div>
+                <!-- Блок с контактной информацией -->
                 <div class="footer__main">
                     <div class="footer__info">
-                        <address class="footer__address">Тураевское шоссе дом 17, д. Островцы, Раменский район, МО,
-                            Россия
+                        <!-- Адрес -->
+                        <address class="footer__address">Староволынская улица, 12с1, Москва, Россия
                         </address>
-                        <a href="tel:+79999099009" class="footer__link-contact footer__link-contact--phone">+7 (999)
-                            909-90-09</a>
+                        <!-- Телефон -->
+                        <a href="tel:+79999099009" class="footer__link-contact footer__link-contact--phone">+7 (999) 909-90-09</a>
+                        <!-- Эл.почта -->
                         <a href="mailto:yumekawaii@gmail.com"
                             class="footer__link-contact footer__link-contact--mail">yumekawaii@gmail.com</a>
+                        <!-- Ссылки на мессенджеры -->
                         <div class="footer__social">
-                            <a href="https://wa.me/79959006626" onclick="ym(52613806,'reachGoal','social-nets')"
-                                class="footer__button button button--black">Whatsapp</a>
-                            <a href="https://t.me/Okoprom" onclick="ym(52613806,'reachGoal','social-nets')"
-                                class="footer__button button button--black">Telegram</a>
+                            <a href="#" class="footer__button button button--purpl">Whatsapp</a>
+                            <a href="#" class="footer__button button button--purpl">Telegram</a>
                         </div>
+                        <!-- Кнопки социальных сетей -->
                         <div class="footer__subscribe subscribe">
+                            <!-- Ссылка и svg иконка -->
                             <a href="#" class="subscribe__link icon icon--outline">
                                 <svg width="24" height="24">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-instagram"></use>
+                                    <use href="img/icons/icons.svg#svg-vk"></use>
                                 </svg>
                             </a>
                             <a href="#" class="subscribe__link icon icon--outline">
                                 <svg width="24" height="24">
-                                    <use xlink:href="/static/okoprom/img/icons/icons.svg#svg-youtube"></use>
+                                    <use href="img/icons/icons.svg#svg-youtube"></use>
                                 </svg>
                             </a>
                             <p class="subscribe__text">Подписывайтесь на нас в&nbsp;социальных сетях</p>
                         </div>
                     </div>
+                    <!-- Страницы сайта или навигация -->
                     <div class="footer__links">
+                        <!-- Ссылки на страниы каталога товара -->
                         <div class="footer__column">
-                            <h4 class="footer__caption">Наша продукция</h4>
+                            <h4 class="footer__caption">Наша товары</h4>
                             <ul class="footer__list">
-
-
-                                <li class="footer__link-list"><a
-                                        href="catalog/Stanki-dlia-razdelki-kabelia/index.htm">Станки для разделки
-                                        кабеля</a></li>
-
-                                <li class="footer__link-list"><a
-                                        href="catalog/Separatory-Drobilki-dlia-kabelia/index.htm">Производство</a></li>
-
-                                <li class="footer__link-list"><a href="catalog/Zapasnye-chasti/index.htm">Запасные
-                                        части</a></li>
-
+                                <li class="footer__link-list">
+                                    <a href="catalog.html">Аксессуары для дома</a>
+                                </li>
+                                <li class="footer__link-list">
+                                    <a href="catalog.html">Пластинки</a>
+                                </li>
+                                <li class="footer__link-list">
+                                    <a href="catalog.html">Фигурки</a>
+                                </li>
+                                <li class="footer__link-list">
+                                    <a href="catalog.html">Мягкие игрушки</a>
+                                </li>
+                                <li class="footer__link-list">
+                                    <a href="catalog.html">Сувениры</a>
+                                </li>
+                                <li class="footer__link-list">
+                                    <a href="catalog.html">Другое</a>
+                                </li>
                             </ul>
                         </div>
+                        <!-- Ссылки на страницы с информацией -->
                         <div class="footer__column">
                             <h4 class="footer__caption">Информация</h4>
                             <ul class="footer__list">
-                                <li class="footer__link-list"><a href="dostavka-i-oplata/index.htm">Доставка и
-                                        оплата</a></li>
-                                <li class="footer__link-list"><a href="garantiya/index.htm">Гарантия</a></li>
-
-                                <li class="footer__link-list"><a href="catalog/all/index.htm">Наше производство</a></li>
-                                <li class="footer__link-list"><a href="o-kompanii/index.htm">О компании</a></li>
-                                <li class="footer__link-list"><a href="contacts/index.htm">Контакты</a></li>
+                                <li class="footer__link-list"><a href="dostavka-i-oplata.html">Доставка и оплата</a></li>
+                                <li class="footer__link-list"><a href="garantiya.html">Гарантия</a></li>
+                                <li class="footer__link-list"><a href="o-kompanii.html">О компании</a></li>
+                                <li class="footer__link-list"><a href="contacts.html">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+                <!-- Конец футера. Ссылка на политику конфиденциальности -->
                 <div class="footer__bottom">
-                    <div class="footer__copyrith">Интернет магазин "Окопром" © 2021 <br> Все права защищены</div>
+                    <div class="footer__copyrith">Интернет-магазин "YumeKawaii" © 2023 <br> Все права защищены</div>
                     <a href="#" class="footer__politic">Политика конфиденциальности</a>
                 </div>
 
             </div>
         </footer>
-
     </div>
-
-    <script type="text/javascript" src="js/app_v2.js"></script>
-
-
 </body>
-
 </html>
