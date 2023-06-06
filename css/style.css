@@ -716,6 +716,7 @@ body::after {
 .button--secondary {
   background-color: transparent;
   border: 1px solid var(--purpl);
+  fill: var(--purpl);
 }
 
 .icon {
@@ -1412,6 +1413,10 @@ body::after {
   margin: 0 0 2rem 0;
 }
 
+.catalog__filter {
+  display: none;
+}
+
 catalog__filter {
   display: none;  
 }
@@ -1591,6 +1596,15 @@ catalog__filter {
 
 .category-filter__element {
   position: relative;
+}
+
+.category-filter {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .inner-category {
@@ -2978,6 +2992,10 @@ catalog__filter {
     gap: 1.75rem;
   }
 
+  .catalog__filter {
+    display: block;
+  }
+
   .catalog__mob-filter {
     display: none;
   }
@@ -3126,7 +3144,7 @@ catalog__filter {
   }
 
   .catalog__button {
-    margin: 40px auto 0;
+    margin: 60px auto 0;
     background-color: var(--p-gray-bg);
   }
 
@@ -3254,14 +3272,6 @@ catalog__filter {
 }
 
 @media (min-width: 25em) {
-  .category-filter {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
 
   .category-filter.active {
     display: -webkit-box;
@@ -3387,8 +3397,7 @@ catalog__filter {
   }
 
   .catalog__button {
-    width: 100%;
-    margin: 2.5rem 0 0 0;
+    margin: 2.5rem auto 0;
   }
 
   .product-hero__bottom-row {
@@ -3991,7 +4000,7 @@ catalog__filter {
   }
 
   .catalog__button {
-    margin: 2rem 0 0 0;
+    margin: 2rem auto 0;
   }
 
   .item-catalog {
@@ -4519,6 +4528,7 @@ catalog__filter {
   .button--secondary:hover {
     background-color: var(--purpl-bg);
     color: var(--white);
+    fill: var(--white);
   }
 
   .button--secondary:active {
